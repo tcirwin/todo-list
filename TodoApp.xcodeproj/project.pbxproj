@@ -19,6 +19,10 @@
 		C92AB78A180E38E500FB13DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92AB772180E38E500FB13DC /* UIKit.framework */; };
 		C92AB792180E38E500FB13DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92AB790180E38E500FB13DC /* InfoPlist.strings */; };
 		C92AB794180E38E500FB13DC /* TodoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AB793180E38E500FB13DC /* TodoAppTests.m */; };
+		C92AB7A0180E394F00FB13DC /* FUATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AB79E180E394F00FB13DC /* FUATableViewController.m */; };
+		C92AB7A5180E397D00FB13DC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92AB7A4180E397D00FB13DC /* Storyboard.storyboard */; };
+		C9B711BD180E41120003F198 /* FUATableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B711BC180E41120003F198 /* FUATableCell.m */; };
+		C9B711BF180E41380003F198 /* FUATableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B711BE180E41380003F198 /* FUATableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		C92AB78F180E38E500FB13DC /* TodoAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TodoAppTests-Info.plist"; sourceTree = "<group>"; };
 		C92AB791180E38E500FB13DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92AB793180E38E500FB13DC /* TodoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoAppTests.m; sourceTree = "<group>"; };
+		C92AB79D180E394F00FB13DC /* FUATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUATableViewController.h; sourceTree = "<group>"; };
+		C92AB79E180E394F00FB13DC /* FUATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUATableViewController.m; sourceTree = "<group>"; };
+		C92AB7A4180E397D00FB13DC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C9B711BB180E41120003F198 /* FUATableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUATableCell.h; sourceTree = "<group>"; };
+		C9B711BC180E41120003F198 /* FUATableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUATableCell.m; sourceTree = "<group>"; };
+		C9B711BE180E41380003F198 /* FUATableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUATableCell.xib; sourceTree = "<group>"; };
+		C9B711C0180E58F50003F198 /* FUATodoItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUATodoItemDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +118,17 @@
 		C92AB774180E38E500FB13DC /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9B711C0180E58F50003F198 /* FUATodoItemDelegate.h */,
 				C92AB77D180E38E500FB13DC /* FUAAppDelegate.h */,
 				C92AB77E180E38E500FB13DC /* FUAAppDelegate.m */,
 				C92AB780180E38E500FB13DC /* Images.xcassets */,
 				C92AB775180E38E500FB13DC /* Supporting Files */,
+				C92AB79D180E394F00FB13DC /* FUATableViewController.h */,
+				C92AB79E180E394F00FB13DC /* FUATableViewController.m */,
+				C92AB7A4180E397D00FB13DC /* Storyboard.storyboard */,
+				C9B711BB180E41120003F198 /* FUATableCell.h */,
+				C9B711BC180E41120003F198 /* FUATableCell.m */,
+				C9B711BE180E41380003F198 /* FUATableCell.xib */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -220,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92AB7A5180E397D00FB13DC /* Storyboard.storyboard in Resources */,
+				C9B711BF180E41380003F198 /* FUATableCell.xib in Resources */,
 				C92AB779180E38E500FB13DC /* InfoPlist.strings in Resources */,
 				C92AB781180E38E500FB13DC /* Images.xcassets in Resources */,
 			);
@@ -240,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92AB7A0180E394F00FB13DC /* FUATableViewController.m in Sources */,
+				C9B711BD180E41120003F198 /* FUATableCell.m in Sources */,
 				C92AB77B180E38E500FB13DC /* main.m in Sources */,
 				C92AB77F180E38E500FB13DC /* FUAAppDelegate.m in Sources */,
 			);
@@ -442,6 +464,7 @@
 				C92AB799180E38E500FB13DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C92AB79A180E38E500FB13DC /* Build configuration list for PBXNativeTarget "TodoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +473,7 @@
 				C92AB79C180E38E500FB13DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
